@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: casa-do-codigo
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:file:./casa-do-codigo;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    username: sa
+    password: password
+  jpa:
+    defer-datasource-initialization: true
+    open-in-view: false
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2
+      settings.trace: false
+      settings.web-allow-others: false
