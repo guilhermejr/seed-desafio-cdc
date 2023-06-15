@@ -4,6 +4,7 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 import lombok.*;
+import net.guilhermejr.casadocodigo.api.request.validation.constrant.EmailUnico;
 import net.guilhermejr.casadocodigo.domain.entity.Autor;
 
 import java.time.LocalDateTime;
@@ -21,6 +22,7 @@ public class AutorRequest {
 
     @NotBlank
     @Email
+    @EmailUnico
     private String email;
 
     @NotBlank
